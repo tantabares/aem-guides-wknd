@@ -1,0 +1,89 @@
+/* WKND teaser - card.less*/
+
+@teaser-height: 350px;
+@teaser-img-height: @teaser-height;
+
+.cmp-teaser--card {
+
+    .cmp-teaser {
+        background-color: #ededed;
+        height: @teaser-height;
+        margin-bottom: @gutter-padding;
+        max-height: @teaser-height;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: @screen-small) {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: @teaser-height;
+        }
+
+        .cmp-teaser__image {
+            overflow: hidden;
+            padding-top: 0px;
+            width: 100%;
+
+            .cmp-image__image {
+                -moz-transition: all 0.2s;
+                -o-transition: all 0.2s;
+                -webkit-transition: all 0.2s;
+                height: @teaser-img-height;
+                margin-top: 0px;
+                object-fit: cover;
+                object-position: top;
+                transition: all 0.25s;
+                width: 100%;
+            }
+        }
+
+        .cmp-teaser__title {
+            font-family: @font-family-serif;
+            font-size: @font-size-h3;
+            margin-top: 0px;
+            padding-left: @gutter-padding;
+            position: absolute;
+            text-align: left;
+            top: @gutter-padding;
+            width: 100%;
+        }
+
+        .cmp-teaser__title-link {
+            color: @teaser-light-color;
+        }
+
+        .cmp-teaser__description {
+            display: none;
+        }
+
+        .cmp-teaser__action-container {
+            bottom: @gutter-padding * 2;
+            left: @gutter-padding;
+            position: absolute;
+        }
+
+        .cmp-teaser__action-link {
+            -moz-transition: all 0.25s ease-out;
+            -o-transition: all 0.25s ease-out;
+            -webkit-transition: all 0.25s ease-out;
+            background-color: transparent;
+            border: 1px solid @teaser-light-color;
+            color: @teaser-light-color;
+            transition: all 0.25s ease-out;
+        }
+
+        &:hover {
+            .cmp-teaser__action-link {
+                background-color: @brand-primary;
+                border-color: @brand-primary;
+                color: @teaser-dark-color;
+            }
+
+            .cmp-image__image {
+                -moz-transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+            }
+        }
+    }
+}

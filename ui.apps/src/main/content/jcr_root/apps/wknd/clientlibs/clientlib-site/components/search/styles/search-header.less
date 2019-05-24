@@ -3,7 +3,7 @@
 @search-width: 165px;
 @search-width-expand: 265px;
  
-@search-width-mobile: @search-width /2;
+@search-width-mobile: @search-width / 2;
 @search-width-mobile-expand: @search-width;
 
 .cmp-search--header {
@@ -16,30 +16,30 @@
         &__form {
 
             .cmp-search__icon {
-                top: .7rem;
+                top: 0.7rem;
             }
 
             .cmp-search__clear-icon {
-                top: .7rem;
+                top: 0.7rem;
             }
 
             .cmp-search__input {
                 background-color: #ebebeb8a;
+                border: 0px;
+                border-radius: 0px;
                 color: @text-color;
                 font-size: @font-size-medium;
-                border-radius: 0px;
-                border: none;
                 height: 40px;
-                width: @search-width;
                 padding-right: 2rem;
+                transition: ease-in-out, width 0.35s ease-in-out;
+                width: @search-width;
                 //padding-left: 1.8rem;
-                transition: ease-in-out, width .35s ease-in-out;
 
                 &:focus {
                     background-color: @body-bg;
-                    outline: none !important;
                     border: 1px solid @text-color;
                     box-shadow: none;
+                    outline: none !important;
                     width: @search-width-expand;
                 }
 
@@ -49,6 +49,7 @@
 
                 @media (max-width: @screen-small) {
                     width: @search-width-mobile;
+
                     &:focus {
                         width: @search-width-mobile-expand;
                     }
@@ -57,21 +58,21 @@
         }
 
         .cmp-search__results {
-            margin-top: .5em;
             background: @gray-dark;
+            margin-top: 0.5em;
 
             a.cmp-search__item {
                 color: @brand-third;
                 font-size: @font-size-small;
                 height: 50px;
+                margin-top: 0.25em;
+                padding: 0.5em;
                 text-overflow: ellipsis;
-                padding: .5em;
-                margin-top: .25em;
             }
 
             a.cmp-search__item:hover {
-                text-decoration: none;
                 background: @gray-base;
+                text-decoration: none;
             }
 
             .cmp-search__item-mark {
@@ -89,9 +90,9 @@
 
     @media (max-width: @screen-small) {
         margin-right: 1em;
+        margin-top: 0.25em;
         position: absolute;
-        rigth: 0;
+        right: 0px;
         z-index: 100;
-        margin-top: .25em;
     }
 }

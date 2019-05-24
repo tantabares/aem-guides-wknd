@@ -1,0 +1,31 @@
+/* WKND Byline - default.less*/
+
+.cmp-byline {
+
+    @imageSize: 60px;
+
+    .cmp-byline__image {
+        float: left;
+
+        /* This class targets a Core Component Image CSS class */
+        .cmp-image__image {
+            border-radius: @imageSize / 2;
+            height: @imageSize;
+            object-fit: cover;
+            width: @imageSize;
+        }
+    }
+
+    .cmp-byline__name {
+        margin-bottom: 0.25rem;
+        margin-left: @imageSize + 20px;
+    }
+
+    .cmp-byline__occupations {
+        color: @gray-light;
+        font-size: @font-size-small;
+        font-weight: 600;
+        margin-left: @imageSize + 20px;
+        text-transform: uppercase;
+    }
+}
