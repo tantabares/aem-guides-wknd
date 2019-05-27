@@ -19,12 +19,12 @@ import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.apache.sling.models.factory.ModelFactory;
 
-// @Model(
-//     adaptables = {SlingHttpServletRequest.class},
-//     adapters = {Byline.class},
-//     resourceType = {BylineImpl.RESOURCE_TYPE},
-//     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
-// )
+@Model(
+    adaptables = {SlingHttpServletRequest.class},
+    adapters = {Byline.class},
+    resourceType = {BylineImpl.RESOURCE_TYPE},
+    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+)
 public class BylineImpl implements Byline {
 
     protected static final String RESOURCE_TYPE = "wknd/components/content/byline";
@@ -74,7 +74,7 @@ public class BylineImpl implements Byline {
             return true;
         } else if(getImage() == null || StringUtils.isBlank(getImage().getSrc())) {
             // A valid image is required
-        return true;
+            return true;
         } else {
             // Everything is populated, so this component is not considered empty
             return false;

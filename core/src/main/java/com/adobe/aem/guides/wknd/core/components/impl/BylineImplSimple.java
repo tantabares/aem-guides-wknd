@@ -14,12 +14,12 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
-@Model(
-    adaptables = {SlingHttpServletRequest.class},
-    adapters = {Byline.class},
-    resourceType = {BylineImpl.RESOURCE_TYPE},
-    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
-)
+// @Model(
+//     adaptables = {SlingHttpServletRequest.class},
+//     adapters = {Byline.class},
+//     resourceType = {BylineImpl.RESOURCE_TYPE},
+//     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+// )
 public class BylineImplSimple implements Byline {
 
     protected static final String RESOURCE_TYPE = "wknd/components/content/byline";
