@@ -1,0 +1,5 @@
+<sly data-sly-test="${properties.path}">
+    <iframe src="${properties.path}" frameBorder="0" scrolling="no" onload="resizeIframe(this)">
+    </iframe>
+</sly>
+<div data-sly-test="${!properties.path}">ADD SOME PATH</div>
